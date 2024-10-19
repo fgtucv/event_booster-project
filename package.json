@@ -1,0 +1,19 @@
+{
+  "name": "my-project",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "homepage": "https://github.com/fgtucv/event_booster-project",
+  "scripts": {
+    "start": "parcel ./src/index.html --no-cache",
+    "build": "parcel build ./src/*.html --no-cache --public-url /event_booster-project/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "gh-pages": "^6.2.0",
+    "parcel": "^2.12.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "parcel-transformer-hbs": "^1.0.4",
+    "posthtml-include": "^2.0.1"
+  }
+}
