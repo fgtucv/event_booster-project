@@ -1,0 +1,48 @@
+.main {
+    background-color: #0D0D0C;
+}
+
+.main .container {}
+
+.main__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.main__item {
+    
+}
+
+.main__style-div {}
+
+.main__img {
+    margin-bottom: 5px;
+    width: 180px;
+    height: 227px;
+}
+
+.main__title {
+    color: #DC56C5;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.main__date {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.main__locate {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
