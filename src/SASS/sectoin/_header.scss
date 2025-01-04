@@ -1,11 +1,22 @@
 .header {
-    background-image: url(../src/img/desktop/desktop_img_1x/header.png);
+    background-image: url(../src/img/header.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .header .container{
     padding-top: 40px;
     justify-content: center;
     padding-bottom: 192px;
+
+    @media screen and (min-width: 595px) {
+       padding-bottom: 183px;
+    }
+
+    @media screen and (min-width: 280px) {
+        padding-top: 78px;
+        padding-bottom: 112px;
+    }
 }
 
 // .header__logo-div {}
@@ -16,16 +27,31 @@
     font-size: 50px;
     text-align: center;
     margin-bottom: 52px;
+
+    @media screen and (max-width: 1049px) {
+       font-size: 30px;
+       margin-bottom: 27px;
+    }
+
+    @media screen and (max-width: 594px) {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
 }
 
 .header__center-div{
     margin-left: auto;
     margin-right: auto;
     width: 575px;
+
+    @media screen and (max-width: 594px) {
+        width: 270px;
+    }
 }
 
 .header__input-searc {
     background: rgba(255, 255, 255, 0.2);
+    border: none;
     backdrop-filter: blur(10px);
     border-radius: 20px;
     width: 270px;
@@ -35,6 +61,9 @@
     font-size: 16px;
     color: #939393;
     margin-right: 30px;
+    @media screen and (max-width: 594px) {
+        margin-bottom: 25px;
+    }
 }
 
 .header__chose-location {
