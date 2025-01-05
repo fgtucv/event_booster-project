@@ -261,7 +261,7 @@ button {
           transform: translate(-50%, -50%);
   padding-top: 62px;
   width: 930px;
-  height: 1023px;
+  height: 750px;
   padding-left: 50px;
   padding-bottom: 62px;
   overflow: scroll;
@@ -269,9 +269,19 @@ button {
 @media screen and (max-width: 1049px) {
   .modal {
     width: 595px;
-    height: 831px;
   }
 }
+@media screen and (max-width: 594px) {
+  .modal {
+    width: 272px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    padding-left: 12px;
+    padding-top: 75px;
+    padding-bottom: 104px;
+  }
+}
+
 .modal::-webkit-scrollbar {
   display: none;
 }
@@ -317,6 +327,12 @@ button {
     margin-right: 30px;
   }
 }
+@media screen and (max-width: 594px) {
+  .modal_poster {
+    display: none;
+  }
+}
+
 .modal_text-div {
   width: 450px;
 }
@@ -340,6 +356,13 @@ button {
     font-size: 18px;
   }
 }
+@media screen and (max-width: 594px) {
+  .modal_title {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
 .modal_text-info {
   margin-bottom: 20px;
   font-weight: 400;
@@ -351,6 +374,12 @@ button {
     max-width: 256px;
   }
 }
+@media screen and (max-width: 594px) {
+  .modal_text-info {
+    text-align: center;
+  }
+}
+
 .modal_data {
   margin-bottom: 20px;
   font-weight: 400;
@@ -361,6 +390,12 @@ button {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 594px) {
+  .modal_data {
+    text-align: center;
+  }
+}
+
 .modal_locate {
   margin-bottom: 20px;
   font-weight: 400;
@@ -371,6 +406,12 @@ button {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 594px) {
+  .modal_locate {
+    text-align: center;
+  }
+}
+
 .modal_who {
   margin-bottom: 20px;
   font-weight: 400;
@@ -381,6 +422,12 @@ button {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 594px) {
+  .modal_who {
+    text-align: center;
+  }
+}
+
 .modal_prices {
   font-weight: 400;
   font-size: 18px;
@@ -391,6 +438,12 @@ button {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 594px) {
+  .modal_prices {
+    text-align: center;
+  }
+}
+
 .modal_buy {
   background: #4C00FE;
   border-radius: 5px;
@@ -398,6 +451,13 @@ button {
   font-size: 16px;
   color: #FFFFFF;
   padding: 11px 19px;
+}
+@media screen and (max-width: 594px) {
+  .modal_buy {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .modal_buy:first-of-type {
