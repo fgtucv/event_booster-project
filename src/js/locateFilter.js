@@ -11,9 +11,17 @@ function filter(event) {
         placeInVdnh.forEach((elm) => {
             elm.style.display = "none";
         })
+
+        placeInUkraine.forEach((elm) => {
+            elm.style.display = "block";
+        })
     } else if (element.value === "VDNH") {
         placeInUkraine.forEach((elm) => {
             elm.style.display = "none";
+        })
+
+        placeInVdnh.forEach((elm) => {
+            elm.style.display = "block";
         })
     }
 }
