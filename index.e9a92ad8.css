@@ -39,6 +39,7 @@ ul {
 }
 
 a {
+  color: #fff;
   outline: none;
   text-decoration: none;
 }
@@ -67,6 +68,22 @@ button {
   outline: none;
 }
 
+@keyframes to-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px)scale(.5);
+  }
+
+  50% {
+    opacity: .6;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)scale(1);
+  }
+}
+
 .header {
   background-image: url("header.cb9b7078.jpg");
   background-position: center;
@@ -92,12 +109,27 @@ button {
   }
 }
 
+.header__logo-div {
+  backdrop-filter: blur(15px);
+  background: linear-gradient(136.07deg, #c4c4c408 10.75%, #c4c4c400 92.33%);
+  border-bottom-right-radius: 300px;
+  width: 238px;
+  height: 201px;
+  padding-top: 40px;
+  padding-left: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
 .header__title {
   color: #dc56c5;
   text-align: center;
   margin-bottom: 52px;
   font-size: 50px;
   font-weight: 900;
+  animation: 2s to-bottom;
 }
 
 @media screen and (width <= 1049px) {
@@ -118,6 +150,8 @@ button {
   width: 575px;
   margin-left: auto;
   margin-right: auto;
+  animation: 2s to-bottom;
+  position: relative;
 }
 
 @media screen and (width <= 594px) {
@@ -128,6 +162,7 @@ button {
 
 .header__input-searc {
   backdrop-filter: blur(10px);
+  color: #e6e6e6;
   background: #fff3;
   border: none;
   border-radius: 20px;
@@ -143,6 +178,14 @@ button {
   .header__input-searc {
     margin-bottom: 25px;
   }
+}
+
+.header__searc-icon {
+  fill: #e6e6e6;
+  position: absolute;
+  top: 50%;
+  left: 240px;
+  transform: translate(-50%, -50%);
 }
 
 .header__input-searc::-webkit-input-placeholder {
@@ -213,6 +256,8 @@ button {
 }
 
 .main__img {
+  -o-object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
   width: 180px;
@@ -222,6 +267,7 @@ button {
 
 @media screen and (width <= 594px) {
   .main__img {
+    width: 128px;
     height: 161px;
   }
 }
@@ -266,6 +312,7 @@ button {
   align-items: center;
   width: 30px;
   height: 30px;
+  display: flex;
 }
 
 .main__pagination-button {
@@ -337,15 +384,19 @@ button {
 .modal_close-button {
   background: none;
   border: none;
-  outline: 1px solid red;
+  justify-content: center;
+  align-items: center;
   width: 25px;
   height: 25px;
+  display: flex;
   position: absolute;
   top: 30px;
   right: 30px;
 }
 
 .modal_event-logo {
+  -o-object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
   width: 132px;
   height: 132px;
@@ -361,6 +412,8 @@ button {
 }
 
 .modal_poster {
+  -o-object-fit: cover;
+  object-fit: cover;
   width: 360px;
   height: 641px;
   margin-right: 60px;
@@ -539,6 +592,7 @@ button {
 
 .footer {
   background-color: #0d0d0c;
+  position: relative;
 }
 
 .footer .container {
@@ -558,5 +612,16 @@ button {
     font-size: 14px;
     font-weight: 400;
   }
+}
+
+.scroll-to-top {
+  color: #fff;
+  background-color: #dc56c5;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 12px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
 }
 /*# sourceMappingURL=index.e9a92ad8.css.map */
