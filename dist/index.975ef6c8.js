@@ -584,34 +584,31 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"8lqZg":[function(require,module,exports) {
-var _dynamicList = require("./js/dynamicList");
-var _modal = require("./js/modal");
-var _locateFilter = require("./js/locateFilter");
+var _createMarkupJs = require("./js/operation/createMarkup.js");
+var _modalJs = require("./js/operation/modal.js");
+var _getEventApiJs = require("./js/service/getEventApi.js");
+var _appJs = require("./js/app.js");
+var _searcEventJs = require("./js/operation/searcEvent.js");
 
-},{"./js/dynamicList":"3CXEg","./js/modal":"aHHgN","./js/locateFilter":"bWbcx"}],"3CXEg":[function(require,module,exports) {
+},{"./js/operation/createMarkup.js":"dSBT4","./js/operation/modal.js":"hiVR5","./js/service/getEventApi.js":"jMksz","./js/app.js":"8lRBv","./js/operation/searcEvent.js":"3Vaad"}],"dSBT4":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _baseJson = require("../json/base.json");
-var _baseJsonDefault = parcelHelpers.interopDefault(_baseJson);
-// import img from "../"
-console.log((0, _baseJsonDefault.default));
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createMarkup", ()=>createMarkup);
 const list = document.querySelector(".main__list");
-function buildList(itemsArray) {
-    const html = itemsArray.map((item)=>{
-        return `<li data-locate="${item.data}" class="main__item">
+function createMarkup(arr) {
+    console.log(arr);
+    const html = arr.events.map((item)=>{
+        return `<li class="main__item">
                      <div class="main__style-div"></div>
-                     <img class="main__img" src="${item.img}" alt="poster"/>
-                     <h2 class="main__title">${item.title}</h2>
-                     <span class="main__date">${item.date}</span><span class="main__locate">${item.location}</span>
+                     <img class="main__img" src="${item.images[0].url}" alt="poster"/>
+                     <h2 class="main__title">${item.name}</h2>
+<span class="main__locate">${item.locale}</span>
                    </li>`;
     }).join("");
     list.innerHTML = html;
 }
-buildList((0, _baseJsonDefault.default));
 
-},{"../json/base.json":"SaJzT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"SaJzT":[function(require,module,exports) {
-module.exports = JSON.parse('[{"img":"https://s3-alpha-sig.figma.com/img/add3/7c25/16e7c60d890e9f1a86303ce3e35cbb9d?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eKc6qBtKt3OSWGDYPFBZuVpiJj9JtwT3VXEs~302j7lsIeUcFn6l3UrSJDjdqcjS8Hfj~WIlCQi-jQUdg9xReWPMMccfWS7HfcK7YksJd4ck8IU5nJEYh-ZIc776zOm0WyHAQYkiQtZXU~HiDHgRQF4xqlQPlgNMwj9usCDgtNfuSmLdRiY8S0KL8Moz9vY1oulqVM7ONr3ApDyaAna0ZNVePMDgKK46qsYVxFqGKLnoSVXybXUuvcggPbad0zrqXqAvPImnuV0dlYcxwfW-lv1-BCpo5jv6HMZgE1aKUiR-r2a3CoxElerXnoWaVUp3CDkBGySXG67bF2AhUisKvQ__","title":"Eurovision 2021 finals!","date":"2021-05-13","location":"Palace of Ukraine","data":"Ukraine"},{"img":"https://s3-alpha-sig.figma.com/img/baa8/5bc0/f668bcccf6139be4eea8ce8e94316c17?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UkadHVN68MpApUyXF2LmC5Nd7ArYvGhACe9iGpJWkLQQ6eV9zADeasAcvcGIlvInAHB~xQoKGObreN5KTQvPj1iDPFNhmOrcPYQ9OsFPYQKsRSUdj0825nNH~nKrTvnkpELQwxvUhdiXwHU5UjYO1sa8vre8cCBrZ8yG~pecUwC36IOjgXZu8aviQHHaR9RpuFm2WudeBV~RsX7n~eWsnz9M-U39SccZLJs4CiDQwoqK2mX0WSUNyLXA2PQEheObssX7-GYuCL-tjBTuLJJv0W5X9OXrv2pFG2fiucm8FoBYMxj39vXRrOy-wrslJI~uMI9v3CvQNvX16CPOV7IPxA__","title":"Atlas Weekend","date":"2021-06-09","location":"VDNH","data":"vdnh"},{"img":"https://s3-alpha-sig.figma.com/img/f0e1/9f4b/7a065671325e0a04624a1e84d1a1b113?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dJ61c3euQH1dOvY6b4zFhPwbX7SHe-PLbnScf3I7ZWOxrJBTtDmfbjE7E4-cZ8borf7ViseDYnufLFlgfGCmuOm8qUVGHyfYCN3lkjl1CVMRQLICSoaUwCGcreYEa8b1XJq9MGmODqGmT7LW1YxGg8m2-KzcXSL9uPGgSH70Wx9G7Mko-os3DAsr2JuXxKiC3HTbGlOo5Y6FwED~mGspdaV1FnG5vLi3MhfF91YpI3Bv~1RrLvj8-khlwPnVXrF2xVvcrfJeNBoLs8LJOFbL4fkGARmTfxN00eK~N8tW5FNPh0SAWZ4H5kZjn8hg856fMfI-hKPlPM73~8SsGAN~MA__","title":"LP","date":"2021-07-27","location":"Palace of Ukraine","data":"Ukraine"},{"img":"https://s3-alpha-sig.figma.com/img/cd2e/9ddd/0b5ec0d9560580ea919fa9c7f97d6f54?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ANsDziXVUlqX7zqOVazcYT6wCLlUkCy~~E5F6XU~T8F8FLxKPbgA2h2rE5bRdaKGSdQrQQd8POSHMQultzd~1htv~7Jvp9jg3oa1pyFB6QZcszUv4FVuyQJ8PMihTAV6S0EOkl0~17PAMDq3uEBVzbo6yeSLTi3UEfw62~fYVrUEKYENoLWGrfbdVy0PbboshKLmKqyD2a5She-0nJLDdWmJ4qsk7SIx-4YVegM8WdOwchMhEAKqIs2tmJeN7fBrOKnc78YfrT3v~MOS3V~7-oD7frTII5rybjLh0v9yr54YG8FmbSx6R8~oFF-5zuBDLL9C28fq1xoo-sm2OE7Nsw__","title":"MONATIK","date":"2021-07-17","location":"VDNH","data":"vdnh"},{"img":"https://s3-alpha-sig.figma.com/img/cd2e/9ddd/0b5ec0d9560580ea919fa9c7f97d6f54?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ANsDziXVUlqX7zqOVazcYT6wCLlUkCy~~E5F6XU~T8F8FLxKPbgA2h2rE5bRdaKGSdQrQQd8POSHMQultzd~1htv~7Jvp9jg3oa1pyFB6QZcszUv4FVuyQJ8PMihTAV6S0EOkl0~17PAMDq3uEBVzbo6yeSLTi3UEfw62~fYVrUEKYENoLWGrfbdVy0PbboshKLmKqyD2a5She-0nJLDdWmJ4qsk7SIx-4YVegM8WdOwchMhEAKqIs2tmJeN7fBrOKnc78YfrT3v~MOS3V~7-oD7frTII5rybjLh0v9yr54YG8FmbSx6R8~oFF-5zuBDLL9C28fq1xoo-sm2OE7Nsw__","title":"MONATIK","date":"2021-07-17","location":"VDNH","data":"vdnh"},{"img":"https://s3-alpha-sig.figma.com/img/f0e1/9f4b/7a065671325e0a04624a1e84d1a1b113?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dJ61c3euQH1dOvY6b4zFhPwbX7SHe-PLbnScf3I7ZWOxrJBTtDmfbjE7E4-cZ8borf7ViseDYnufLFlgfGCmuOm8qUVGHyfYCN3lkjl1CVMRQLICSoaUwCGcreYEa8b1XJq9MGmODqGmT7LW1YxGg8m2-KzcXSL9uPGgSH70Wx9G7Mko-os3DAsr2JuXxKiC3HTbGlOo5Y6FwED~mGspdaV1FnG5vLi3MhfF91YpI3Bv~1RrLvj8-khlwPnVXrF2xVvcrfJeNBoLs8LJOFbL4fkGARmTfxN00eK~N8tW5FNPh0SAWZ4H5kZjn8hg856fMfI-hKPlPM73~8SsGAN~MA__","title":"LP","date":"2021-07-27","location":"Palace of Ukraine","data":"Ukraine"},{"img":"https://s3-alpha-sig.figma.com/img/baa8/5bc0/f668bcccf6139be4eea8ce8e94316c17?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UkadHVN68MpApUyXF2LmC5Nd7ArYvGhACe9iGpJWkLQQ6eV9zADeasAcvcGIlvInAHB~xQoKGObreN5KTQvPj1iDPFNhmOrcPYQ9OsFPYQKsRSUdj0825nNH~nKrTvnkpELQwxvUhdiXwHU5UjYO1sa8vre8cCBrZ8yG~pecUwC36IOjgXZu8aviQHHaR9RpuFm2WudeBV~RsX7n~eWsnz9M-U39SccZLJs4CiDQwoqK2mX0WSUNyLXA2PQEheObssX7-GYuCL-tjBTuLJJv0W5X9OXrv2pFG2fiucm8FoBYMxj39vXRrOy-wrslJI~uMI9v3CvQNvX16CPOV7IPxA__","title":"Atlas Weekend","date":"2021-06-09","location":"VDNH","data":"vdnh"},{"img":"https://s3-alpha-sig.figma.com/img/add3/7c25/16e7c60d890e9f1a86303ce3e35cbb9d?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eKc6qBtKt3OSWGDYPFBZuVpiJj9JtwT3VXEs~302j7lsIeUcFn6l3UrSJDjdqcjS8Hfj~WIlCQi-jQUdg9xReWPMMccfWS7HfcK7YksJd4ck8IU5nJEYh-ZIc776zOm0WyHAQYkiQtZXU~HiDHgRQF4xqlQPlgNMwj9usCDgtNfuSmLdRiY8S0KL8Moz9vY1oulqVM7ONr3ApDyaAna0ZNVePMDgKK46qsYVxFqGKLnoSVXybXUuvcggPbad0zrqXqAvPImnuV0dlYcxwfW-lv1-BCpo5jv6HMZgE1aKUiR-r2a3CoxElerXnoWaVUp3CDkBGySXG67bF2AhUisKvQ__","title":"Eurovision 2021 finals!","date":"2021-05-13","location":"Palace of Ukraine","data":"Ukraine"},{"img":"https://s3-alpha-sig.figma.com/img/baa8/5bc0/f668bcccf6139be4eea8ce8e94316c17?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UkadHVN68MpApUyXF2LmC5Nd7ArYvGhACe9iGpJWkLQQ6eV9zADeasAcvcGIlvInAHB~xQoKGObreN5KTQvPj1iDPFNhmOrcPYQ9OsFPYQKsRSUdj0825nNH~nKrTvnkpELQwxvUhdiXwHU5UjYO1sa8vre8cCBrZ8yG~pecUwC36IOjgXZu8aviQHHaR9RpuFm2WudeBV~RsX7n~eWsnz9M-U39SccZLJs4CiDQwoqK2mX0WSUNyLXA2PQEheObssX7-GYuCL-tjBTuLJJv0W5X9OXrv2pFG2fiucm8FoBYMxj39vXRrOy-wrslJI~uMI9v3CvQNvX16CPOV7IPxA__","title":"Atlas Weekend","date":"2021-06-09","location":"VDNH","data":"vdnh"},{"img":"https://s3-alpha-sig.figma.com/img/add3/7c25/16e7c60d890e9f1a86303ce3e35cbb9d?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eKc6qBtKt3OSWGDYPFBZuVpiJj9JtwT3VXEs~302j7lsIeUcFn6l3UrSJDjdqcjS8Hfj~WIlCQi-jQUdg9xReWPMMccfWS7HfcK7YksJd4ck8IU5nJEYh-ZIc776zOm0WyHAQYkiQtZXU~HiDHgRQF4xqlQPlgNMwj9usCDgtNfuSmLdRiY8S0KL8Moz9vY1oulqVM7ONr3ApDyaAna0ZNVePMDgKK46qsYVxFqGKLnoSVXybXUuvcggPbad0zrqXqAvPImnuV0dlYcxwfW-lv1-BCpo5jv6HMZgE1aKUiR-r2a3CoxElerXnoWaVUp3CDkBGySXG67bF2AhUisKvQ__","title":"Eurovision 2021 finals!","date":"2021-05-13","location":"Palace of Ukraine","data":"Ukraine"},{"img":"https://s3-alpha-sig.figma.com/img/cd2e/9ddd/0b5ec0d9560580ea919fa9c7f97d6f54?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ANsDziXVUlqX7zqOVazcYT6wCLlUkCy~~E5F6XU~T8F8FLxKPbgA2h2rE5bRdaKGSdQrQQd8POSHMQultzd~1htv~7Jvp9jg3oa1pyFB6QZcszUv4FVuyQJ8PMihTAV6S0EOkl0~17PAMDq3uEBVzbo6yeSLTi3UEfw62~fYVrUEKYENoLWGrfbdVy0PbboshKLmKqyD2a5She-0nJLDdWmJ4qsk7SIx-4YVegM8WdOwchMhEAKqIs2tmJeN7fBrOKnc78YfrT3v~MOS3V~7-oD7frTII5rybjLh0v9yr54YG8FmbSx6R8~oFF-5zuBDLL9C28fq1xoo-sm2OE7Nsw__","title":"MONATIK","date":"2021-07-17","location":"VDNH","data":"vdnh"},{"img":"https://s3-alpha-sig.figma.com/img/f0e1/9f4b/7a065671325e0a04624a1e84d1a1b113?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dJ61c3euQH1dOvY6b4zFhPwbX7SHe-PLbnScf3I7ZWOxrJBTtDmfbjE7E4-cZ8borf7ViseDYnufLFlgfGCmuOm8qUVGHyfYCN3lkjl1CVMRQLICSoaUwCGcreYEa8b1XJq9MGmODqGmT7LW1YxGg8m2-KzcXSL9uPGgSH70Wx9G7Mko-os3DAsr2JuXxKiC3HTbGlOo5Y6FwED~mGspdaV1FnG5vLi3MhfF91YpI3Bv~1RrLvj8-khlwPnVXrF2xVvcrfJeNBoLs8LJOFbL4fkGARmTfxN00eK~N8tW5FNPh0SAWZ4H5kZjn8hg856fMfI-hKPlPM73~8SsGAN~MA__","title":"LP","date":"2021-07-27","location":"Palace of Ukraine","data":"Ukraine"},{"img":"https://s3-alpha-sig.figma.com/img/add3/7c25/16e7c60d890e9f1a86303ce3e35cbb9d?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eKc6qBtKt3OSWGDYPFBZuVpiJj9JtwT3VXEs~302j7lsIeUcFn6l3UrSJDjdqcjS8Hfj~WIlCQi-jQUdg9xReWPMMccfWS7HfcK7YksJd4ck8IU5nJEYh-ZIc776zOm0WyHAQYkiQtZXU~HiDHgRQF4xqlQPlgNMwj9usCDgtNfuSmLdRiY8S0KL8Moz9vY1oulqVM7ONr3ApDyaAna0ZNVePMDgKK46qsYVxFqGKLnoSVXybXUuvcggPbad0zrqXqAvPImnuV0dlYcxwfW-lv1-BCpo5jv6HMZgE1aKUiR-r2a3CoxElerXnoWaVUp3CDkBGySXG67bF2AhUisKvQ__","title":"Eurovision 2021 finals!","date":"2021-05-13","location":"Palace of Ukraine","data":"Ukraine"},{"img":"https://s3-alpha-sig.figma.com/img/cd2e/9ddd/0b5ec0d9560580ea919fa9c7f97d6f54?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ANsDziXVUlqX7zqOVazcYT6wCLlUkCy~~E5F6XU~T8F8FLxKPbgA2h2rE5bRdaKGSdQrQQd8POSHMQultzd~1htv~7Jvp9jg3oa1pyFB6QZcszUv4FVuyQJ8PMihTAV6S0EOkl0~17PAMDq3uEBVzbo6yeSLTi3UEfw62~fYVrUEKYENoLWGrfbdVy0PbboshKLmKqyD2a5She-0nJLDdWmJ4qsk7SIx-4YVegM8WdOwchMhEAKqIs2tmJeN7fBrOKnc78YfrT3v~MOS3V~7-oD7frTII5rybjLh0v9yr54YG8FmbSx6R8~oFF-5zuBDLL9C28fq1xoo-sm2OE7Nsw__","title":"MONATIK","date":"2021-07-17","location":"VDNH","data":"vdnh"},{"img":"https://s3-alpha-sig.figma.com/img/f0e1/9f4b/7a065671325e0a04624a1e84d1a1b113?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dJ61c3euQH1dOvY6b4zFhPwbX7SHe-PLbnScf3I7ZWOxrJBTtDmfbjE7E4-cZ8borf7ViseDYnufLFlgfGCmuOm8qUVGHyfYCN3lkjl1CVMRQLICSoaUwCGcreYEa8b1XJq9MGmODqGmT7LW1YxGg8m2-KzcXSL9uPGgSH70Wx9G7Mko-os3DAsr2JuXxKiC3HTbGlOo5Y6FwED~mGspdaV1FnG5vLi3MhfF91YpI3Bv~1RrLvj8-khlwPnVXrF2xVvcrfJeNBoLs8LJOFbL4fkGARmTfxN00eK~N8tW5FNPh0SAWZ4H5kZjn8hg856fMfI-hKPlPM73~8SsGAN~MA__","title":"LP","date":"2021-07-27","location":"Palace of Ukraine","data":"Ukraine"},{"img":"https://s3-alpha-sig.figma.com/img/baa8/5bc0/f668bcccf6139be4eea8ce8e94316c17?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UkadHVN68MpApUyXF2LmC5Nd7ArYvGhACe9iGpJWkLQQ6eV9zADeasAcvcGIlvInAHB~xQoKGObreN5KTQvPj1iDPFNhmOrcPYQ9OsFPYQKsRSUdj0825nNH~nKrTvnkpELQwxvUhdiXwHU5UjYO1sa8vre8cCBrZ8yG~pecUwC36IOjgXZu8aviQHHaR9RpuFm2WudeBV~RsX7n~eWsnz9M-U39SccZLJs4CiDQwoqK2mX0WSUNyLXA2PQEheObssX7-GYuCL-tjBTuLJJv0W5X9OXrv2pFG2fiucm8FoBYMxj39vXRrOy-wrslJI~uMI9v3CvQNvX16CPOV7IPxA__","title":"Atlas Weekend","date":"2021-06-09","location":"VDNH","data":"vdnh"},{"img":"https://s3-alpha-sig.figma.com/img/f0e1/9f4b/7a065671325e0a04624a1e84d1a1b113?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dJ61c3euQH1dOvY6b4zFhPwbX7SHe-PLbnScf3I7ZWOxrJBTtDmfbjE7E4-cZ8borf7ViseDYnufLFlgfGCmuOm8qUVGHyfYCN3lkjl1CVMRQLICSoaUwCGcreYEa8b1XJq9MGmODqGmT7LW1YxGg8m2-KzcXSL9uPGgSH70Wx9G7Mko-os3DAsr2JuXxKiC3HTbGlOo5Y6FwED~mGspdaV1FnG5vLi3MhfF91YpI3Bv~1RrLvj8-khlwPnVXrF2xVvcrfJeNBoLs8LJOFbL4fkGARmTfxN00eK~N8tW5FNPh0SAWZ4H5kZjn8hg856fMfI-hKPlPM73~8SsGAN~MA__","title":"LP","date":"2021-07-27","location":"Palace of Ukraine","data":"Ukraine"},{"img":"https://s3-alpha-sig.figma.com/img/baa8/5bc0/f668bcccf6139be4eea8ce8e94316c17?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UkadHVN68MpApUyXF2LmC5Nd7ArYvGhACe9iGpJWkLQQ6eV9zADeasAcvcGIlvInAHB~xQoKGObreN5KTQvPj1iDPFNhmOrcPYQ9OsFPYQKsRSUdj0825nNH~nKrTvnkpELQwxvUhdiXwHU5UjYO1sa8vre8cCBrZ8yG~pecUwC36IOjgXZu8aviQHHaR9RpuFm2WudeBV~RsX7n~eWsnz9M-U39SccZLJs4CiDQwoqK2mX0WSUNyLXA2PQEheObssX7-GYuCL-tjBTuLJJv0W5X9OXrv2pFG2fiucm8FoBYMxj39vXRrOy-wrslJI~uMI9v3CvQNvX16CPOV7IPxA__","title":"Atlas Weekend","date":"2021-06-09","location":"VDNH","data":"vdnh"},{"img":"https://s3-alpha-sig.figma.com/img/cd2e/9ddd/0b5ec0d9560580ea919fa9c7f97d6f54?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ANsDziXVUlqX7zqOVazcYT6wCLlUkCy~~E5F6XU~T8F8FLxKPbgA2h2rE5bRdaKGSdQrQQd8POSHMQultzd~1htv~7Jvp9jg3oa1pyFB6QZcszUv4FVuyQJ8PMihTAV6S0EOkl0~17PAMDq3uEBVzbo6yeSLTi3UEfw62~fYVrUEKYENoLWGrfbdVy0PbboshKLmKqyD2a5She-0nJLDdWmJ4qsk7SIx-4YVegM8WdOwchMhEAKqIs2tmJeN7fBrOKnc78YfrT3v~MOS3V~7-oD7frTII5rybjLh0v9yr54YG8FmbSx6R8~oFF-5zuBDLL9C28fq1xoo-sm2OE7Nsw__","title":"MONATIK","date":"2021-07-17","location":"VDNH","data":"vdnh"},{"img":"https://s3-alpha-sig.figma.com/img/add3/7c25/16e7c60d890e9f1a86303ce3e35cbb9d?Expires=1732492800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eKc6qBtKt3OSWGDYPFBZuVpiJj9JtwT3VXEs~302j7lsIeUcFn6l3UrSJDjdqcjS8Hfj~WIlCQi-jQUdg9xReWPMMccfWS7HfcK7YksJd4ck8IU5nJEYh-ZIc776zOm0WyHAQYkiQtZXU~HiDHgRQF4xqlQPlgNMwj9usCDgtNfuSmLdRiY8S0KL8Moz9vY1oulqVM7ONr3ApDyaAna0ZNVePMDgKK46qsYVxFqGKLnoSVXybXUuvcggPbad0zrqXqAvPImnuV0dlYcxwfW-lv1-BCpo5jv6HMZgE1aKUiR-r2a3CoxElerXnoWaVUp3CDkBGySXG67bF2AhUisKvQ__","title":"Eurovision 2021 finals!","date":"2021-05-13","location":"Palace of Ukraine","data":"Ukraine"}]');
-
-},{}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -641,7 +638,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"aHHgN":[function(require,module,exports) {
+},{}],"hiVR5":[function(require,module,exports) {
 const bacdrop = document.querySelector(".bacdrop");
 const openButton = document.querySelector(".main__list");
 const closeButton = document.querySelector(".modal_close-button");
@@ -656,21 +653,74 @@ function closeModal() {
     bacdrop.classList.add("is-hidden");
 }
 
-},{}],"bWbcx":[function(require,module,exports) {
-const select = document.querySelector(".header__chose-location");
-const placeInUkraine = document.querySelectorAll("[data-locate='Ukraine']");
-const placeInVdnh = document.querySelectorAll("[data-locate='vdnh']");
-select.addEventListener("change", filter);
-function filter(event) {
+},{}],"jMksz":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getEventApi", ()=>getEventApi);
+const getEventApi = async (page, keyword)=>{
+    if (keyword === "" || keyword === undefined || keyword === null) try {
+        const result = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=RKwTp5P44ztFFCbPCDFoxyCASf3hPfPS&size=20&page=${page}`).then((data)=>{
+            return data.json();
+        });
+        return result;
+    } catch (error) {
+        return error;
+    }
+    else try {
+        const result = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=RKwTp5P44ztFFCbPCDFoxyCASf3hPfPS&size=20&page=${page}&keyword=${keyword}`).then((data)=>{
+            return data.json();
+        });
+        return result;
+    } catch (error) {
+        return error;
+    }
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8lRBv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "page", ()=>page);
+var _createMarkupJs = require("./operation/createMarkup.js");
+var _getEventApiJs = require("./service/getEventApi.js");
+const paginationList = document.querySelector(".main__pagination-list");
+let page = 1;
+(0, _getEventApiJs.getEventApi)(page, "").then((data)=>{
+    (0, _createMarkupJs.createMarkup)(data._embedded);
+});
+paginationList.addEventListener("click", pagination);
+function pagination(event) {
     const element = event.target;
-    if (element.value === "Palace of Ukraine") placeInVdnh.forEach((elm)=>{
-        elm.style.display = "none";
+    if (!element.classList.contains("main__pagination-button")) return;
+    let activeItem = document.querySelector(".active");
+    let activeButton = document.querySelector(".active-button");
+    page = Number(element.textContent);
+    (0, _getEventApiJs.getEventApi)(page, "").then((data)=>{
+        (0, _createMarkupJs.createMarkup)(data._embedded);
     });
-    else if (element.value === "VDNH") placeInUkraine.forEach((elm)=>{
-        elm.style.display = "none";
+    console.log(activeItem);
+    console.log(activeButton);
+    console.log(element.parentNode);
+    activeItem.classList.remove("active");
+    activeButton.classList.remove("active-button");
+    element.classList.add("active-button");
+    element.parentNode.classList.add("active");
+}
+
+},{"./operation/createMarkup.js":"dSBT4","./service/getEventApi.js":"jMksz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3Vaad":[function(require,module,exports) {
+var _appJs = require("../app.js");
+var _getEventApiJs = require("../service/getEventApi.js");
+var _createMarkupJs = require("./createMarkup.js");
+const searcInput = document.querySelector(".header__input-searc");
+searcInput.addEventListener("input", _.debounce(()=>{
+    searcPost();
+}, 500));
+function searcPost() {
+    const keyWord = searcInput.value;
+    (0, _getEventApiJs.getEventApi)((0, _appJs.page), keyWord).then((data)=>{
+        (0, _createMarkupJs.createMarkup)(data._embedded);
     });
 }
 
-},{}]},["farZc","8lqZg"], "8lqZg", "parcelRequire716c")
+},{"../app.js":"8lRBv","../service/getEventApi.js":"jMksz","./createMarkup.js":"dSBT4"}]},["farZc","8lqZg"], "8lqZg", "parcelRequire716c")
 
 //# sourceMappingURL=index.975ef6c8.js.map

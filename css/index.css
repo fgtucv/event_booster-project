@@ -137,13 +137,32 @@ button {
   padding-left: 30px;
   font-weight: 400;
   font-size: 16px;
-  color: #939393;
   margin-right: 30px;
 }
 @media screen and (max-width: 594px) {
   .header__input-searc {
     margin-bottom: 25px;
   }
+}
+
+.header__input-searc::-webkit-input-placeholder {
+  color: #e6e6e6;
+}
+
+.header__input-searc::-moz-placeholder {
+  color: #e6e6e6;
+}
+
+.header__input-searc:-ms-input-placeholder {
+  color: #e6e6e6;
+}
+
+.header__input-searc::-ms-input-placeholder {
+  color: #e6e6e6;
+}
+
+.header__input-searc::placeholder {
+  color: #e6e6e6;
 }
 
 .header__chose-location {
@@ -156,7 +175,7 @@ button {
   padding-left: 30px;
   font-weight: 400;
   font-size: 16px;
-  color: #939393;
+  color: #e6e6e6;
 }
 
 .main {
@@ -169,6 +188,9 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 50px;
 }
 @media screen and (max-width: 1049px) {
@@ -232,6 +254,53 @@ button {
   font-size: 14px;
   display: block;
   text-align: center;
+}
+
+.main__pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  margin-top: 30px;
+}
+
+.main__pagination-item {
+  width: 30px;
+  height: 30px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__pagination-button {
+  color: #ffffff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: transparent;
+  text-align: center;
+}
+
+.active {
+  color: #DC56C5;
+  border: #DC56C5 1px solid;
+}
+
+.active-button {
+  color: #DC56C5;
 }
 
 .bacdrop {
