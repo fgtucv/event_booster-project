@@ -1,0 +1,7 @@
+const e=document.querySelector(".main__list");function t(t){console.log(t);let n=t.events.map(e=>`<li class="main__item">
+                     <div class="main__style-div"></div>
+                     <img class="main__img" src="${e.images[0].url}" alt="poster"/>
+                     <h2 class="main__title">${e.name}</h2>
+<span class="main__locate">${e.locale}</span>
+                   </li>`).join("");e.innerHTML=n}const n=document.querySelector(".bacdrop"),s=document.querySelector(".main__list"),c=document.querySelector(".modal_close-button");s.addEventListener("click",function(e){let t=e.target;(t.parentElement.classList.contains("main__item")||t.classList.contains("main__item"))&&n.classList.remove("is-hidden")}),c.addEventListener("click",function(){n.classList.add("is-hidden")});const i=async e=>{try{return await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=RKwTp5P44ztFFCbPCDFoxyCASf3hPfPS&size=20&page=${e}`).then(e=>e.json())}catch(e){return e}},a=document.querySelector(".main__pagination-list");i(1).then(e=>{t(e._embedded)}),a.addEventListener("click",function(e){let n=e.target,s=document.querySelector(".active"),c=document.querySelector(".active-button");i(Number(n.textContent)).then(e=>{t(e._embedded)}),console.log(s),console.log(c),console.log(n.parentNode),s.classList.remove("active"),c.classList.remove("active-button"),n.classList.add("active-button"),n.parentNode.classList.add("active")});const o=document.querySelector(".header__input-searc");o.addEventListener("input",o);
+//# sourceMappingURL=index.a91bc912.js.map

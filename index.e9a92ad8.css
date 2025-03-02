@@ -128,7 +128,6 @@ button {
 
 .header__input-searc {
   backdrop-filter: blur(10px);
-  color: #939393;
   background: #fff3;
   border: none;
   border-radius: 20px;
@@ -146,9 +145,25 @@ button {
   }
 }
 
+.header__input-searc::-webkit-input-placeholder {
+  color: #e6e6e6;
+}
+
+.header__input-searc::placeholder {
+  color: #e6e6e6;
+}
+
+.header__input-searc:-ms-input-placeholder {
+  color: #e6e6e6;
+}
+
+.header__input-searc::placeholder {
+  color: #e6e6e6;
+}
+
 .header__chose-location {
   backdrop-filter: blur(10px);
-  color: #939393;
+  color: #e6e6e6;
   background: #fff3;
   border-radius: 20px;
   width: 270px;
@@ -164,6 +179,7 @@ button {
 
 .main__list {
   flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
   display: flex;
 }
@@ -233,6 +249,40 @@ button {
   font-size: 14px;
   font-weight: 600;
   display: block;
+}
+
+.main__pagination-list {
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 30px;
+  display: flex;
+}
+
+.main__pagination-item {
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.main__pagination-button {
+  color: #fff;
+  text-align: center;
+  background: none;
+  width: fit-content;
+  height: fit-content;
+}
+
+.active {
+  color: #dc56c5;
+  border: 1px solid #dc56c5;
+}
+
+.active-button {
+  color: #dc56c5;
 }
 
 .bacdrop {
