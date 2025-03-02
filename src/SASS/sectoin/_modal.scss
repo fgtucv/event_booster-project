@@ -49,12 +49,14 @@
 .modal_close-button {
     background: transparent;
     border: none;
-    outline: 1px red solid;
     width: 25px;
     height: 25px;
     position: absolute;
     right: 30px;
     top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal_event-logo {
@@ -65,6 +67,7 @@
     margin-right: auto;
     display: block;
     margin-bottom: 43px;
+    object-fit: cover;
 }
 
 .modal_info {
@@ -76,6 +79,7 @@
     width: 360px;
     height: 641px;
     margin-right: 60px;
+    object-fit: cover;
 
     @media screen and (max-width: 1049px) {
         width: 233px;

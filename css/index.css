@@ -42,6 +42,7 @@ ul {
 a {
   text-decoration: none;
   outline: none;
+  color: white;
 }
 
 p {
@@ -70,6 +71,37 @@ button {
   cursor: pointer;
 }
 
+@-webkit-keyframes to-bottom {
+  0% {
+    -webkit-transform: translateY(-100px) scale(0.5);
+            transform: translateY(-100px) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes to-bottom {
+  0% {
+    -webkit-transform: translateY(-100px) scale(0.5);
+            transform: translateY(-100px) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
 .header {
   background-image: url(../src/img/header.jpg);
   background-size: cover;
@@ -95,12 +127,29 @@ button {
   }
 }
 
+.header__logo-div {
+  width: 238px;
+  height: 201px;
+  padding-top: 40px;
+  padding-left: 40px;
+  background: linear-gradient(136.07deg, rgba(196, 196, 196, 0.03) 10.75%, rgba(196, 196, 196, 0) 92.33%);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-bottom-right-radius: 300px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
 .header__title {
   color: #DC56C5;
   font-weight: 900;
   font-size: 50px;
   text-align: center;
   margin-bottom: 52px;
+  -webkit-animation: to-bottom 2s;
+          animation: to-bottom 2s;
 }
 @media screen and (max-width: 1049px) {
   .header__title {
@@ -119,6 +168,9 @@ button {
   margin-left: auto;
   margin-right: auto;
   width: 575px;
+  -webkit-animation: to-bottom 2s;
+          animation: to-bottom 2s;
+  position: relative;
 }
 @media screen and (max-width: 594px) {
   .header__center-div {
@@ -138,11 +190,21 @@ button {
   font-weight: 400;
   font-size: 16px;
   margin-right: 30px;
+  color: #e6e6e6;
 }
 @media screen and (max-width: 594px) {
   .header__input-searc {
     margin-bottom: 25px;
   }
+}
+
+.header__searc-icon {
+  position: absolute;
+  fill: #e6e6e6;
+  top: 50%;
+  left: 240px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .header__input-searc::-webkit-input-placeholder {
@@ -224,10 +286,13 @@ button {
   height: 227px;
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 594px) {
   .main__img {
     height: 161px;
+    width: 128px;
   }
 }
 
@@ -280,6 +345,9 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .main__pagination-button {
@@ -358,12 +426,20 @@ button {
 .modal_close-button {
   background: transparent;
   border: none;
-  outline: 1px red solid;
   width: 25px;
   height: 25px;
   position: absolute;
   right: 30px;
   top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal_event-logo {
@@ -374,6 +450,8 @@ button {
   margin-right: auto;
   display: block;
   margin-bottom: 43px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .modal_info {
@@ -388,6 +466,8 @@ button {
   width: 360px;
   height: 641px;
   margin-right: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 1049px) {
   .modal_poster {
@@ -548,6 +628,7 @@ button {
 
 .footer {
   background-color: #0D0D0C;
+  position: relative;
 }
 
 .footer .container {
@@ -566,4 +647,15 @@ button {
     font-weight: 400;
     font-size: 14px;
   }
+}
+
+.scroll-to-top {
+  background-color: #DC56C5;
+  border: none;
+  padding: 10 12;
+  border-radius: 20px;
+  color: white;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
 }/*# sourceMappingURL=index.css.map */

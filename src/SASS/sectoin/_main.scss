@@ -40,9 +40,10 @@
     height: 227px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
-
+    object-fit: cover;
     @media screen and (max-width: 594px) {
         height: 161px;
+        width: 128px;
     }
 }
 
@@ -86,6 +87,7 @@
     border-bottom-right-radius: 10px;
     align-items: center;
     justify-content: center;
+    display: flex;
 }
 
 .main__pagination-button {
