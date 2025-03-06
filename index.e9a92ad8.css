@@ -8,8 +8,6 @@ body {
   width: 1050px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
   display: block;
 }
 
@@ -21,12 +19,11 @@ body {
 
 @media screen and (width <= 1049px) {
   .container {
-    width: 595px;
-    padding: 0;
+    width: 610px;
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .container {
     width: 280px;
   }
@@ -39,7 +36,7 @@ ul {
 }
 
 a {
-  color: #fff;
+  color: #dc56c5;
   outline: none;
   text-decoration: none;
 }
@@ -96,13 +93,13 @@ button {
   padding-bottom: 192px;
 }
 
-@media screen and (width >= 595px) {
+@media screen and (width <= 1049px) {
   .header .container {
     padding-bottom: 183px;
   }
 }
 
-@media screen and (width >= 280px) {
+@media screen and (width <= 767px) {
   .header .container {
     padding-top: 78px;
     padding-bottom: 112px;
@@ -112,7 +109,7 @@ button {
 .header__logo-div {
   backdrop-filter: blur(15px);
   background: linear-gradient(136.07deg, #c4c4c408 10.75%, #c4c4c400 92.33%);
-  border-bottom-right-radius: 300px;
+  border-bottom-right-radius: 90%;
   width: 238px;
   height: 201px;
   padding-top: 40px;
@@ -121,6 +118,43 @@ button {
   top: 0;
   left: 0;
   overflow: hidden;
+}
+
+@media screen and (width <= 1049px) {
+  .header__logo-div {
+    width: 180px;
+    height: 151px;
+    padding-top: 23px;
+    padding-left: 23px;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .header__logo-div {
+    width: 107px;
+    height: 90px;
+    padding-top: 23px;
+    padding-left: 23px;
+  }
+}
+
+.header__logo-icon {
+  width: 137px;
+  height: 68px;
+}
+
+@media screen and (width <= 1049px) {
+  .header__logo-icon {
+    width: 100px;
+    height: 46px;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .header__logo-icon {
+    width: 54px;
+    height: 27px;
+  }
 }
 
 .header__title {
@@ -139,7 +173,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .header__title {
     margin-bottom: 25px;
     font-size: 18px;
@@ -154,7 +188,7 @@ button {
   position: relative;
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .header__center-div {
     width: 270px;
   }
@@ -166,15 +200,17 @@ button {
   background: #fff3;
   border: none;
   border-radius: 20px;
+  outline: none;
   width: 270px;
   height: 40px;
   margin-right: 30px;
   padding-left: 30px;
+  padding-right: 45px;
   font-size: 16px;
   font-weight: 400;
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .header__input-searc {
     margin-bottom: 25px;
   }
@@ -207,13 +243,24 @@ button {
 .header__chose-location {
   backdrop-filter: blur(10px);
   color: #e6e6e6;
+  appearance: none;
   background: #fff3;
+  border: none;
   border-radius: 20px;
+  outline: none;
   width: 270px;
   height: 40px;
   padding-left: 30px;
+  padding-right: 30px;
   font-size: 16px;
   font-weight: 400;
+}
+
+.header__arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translate(-50%, -50%);
 }
 
 .main {
@@ -233,7 +280,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .main__list {
     gap: 30px 4px;
   }
@@ -249,7 +296,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .main__item {
     width: 138px;
   }
@@ -265,7 +312,7 @@ button {
   margin-bottom: 5px;
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .main__img {
     width: 128px;
     height: 161px;
@@ -278,6 +325,12 @@ button {
   margin-bottom: 5px;
   font-size: 16px;
   font-weight: 700;
+}
+
+@media screen and (width <= 767px) {
+  .main__title {
+    font-size: 14px;
+  }
 }
 
 .main__date {
@@ -295,6 +348,12 @@ button {
   font-size: 14px;
   font-weight: 600;
   display: block;
+}
+
+@media screen and (width <= 767px) {
+  .main__locate {
+    font-size: 12px;
+  }
 }
 
 .main__pagination-list {
@@ -366,7 +425,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .modal {
     border-top-left-radius: 100px;
     border-bottom-right-radius: 100px;
@@ -427,7 +486,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .modal_poster {
     display: none;
   }
@@ -458,7 +517,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .modal_title {
     text-align: center;
     font-size: 20px;
@@ -478,7 +537,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .modal_text-info {
     text-align: center;
   }
@@ -496,7 +555,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .modal_data {
     text-align: center;
   }
@@ -514,7 +573,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .modal_locate {
     text-align: center;
   }
@@ -532,7 +591,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .modal_who {
     text-align: center;
   }
@@ -550,7 +609,7 @@ button {
   }
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .modal_prices {
     text-align: center;
   }
@@ -565,7 +624,7 @@ button {
   font-weight: 500;
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .modal_buy {
     margin-left: auto;
     margin-right: auto;
@@ -607,7 +666,7 @@ button {
   font-weight: 400;
 }
 
-@media screen and (width <= 594px) {
+@media screen and (width <= 767px) {
   .footer__info {
     font-size: 14px;
     font-weight: 400;
@@ -615,13 +674,20 @@ button {
 }
 
 .scroll-to-top {
-  color: #fff;
-  background-color: #dc56c5;
-  border: none;
+  background-color: #0000;
+  border: 1px solid #dc56c5;
   border-radius: 20px;
   padding: 10px 12px;
   position: absolute;
   bottom: 30px;
   right: 30px;
+}
+
+@media screen and (width <= 767px) {
+  .scroll-to-top {
+    bottom: 45px;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
 }
 /*# sourceMappingURL=index.e9a92ad8.css.map */
