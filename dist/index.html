@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__logo-div">
-                <svg width="137" height="68" viewbox="0 0 137 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="header__logo-icon" viewbox="0 0 137 68" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M42.4196 51.2823C41.1432 47.7342 38.5165 45.9597 34.5395 45.959H33.2847V67.8451H34.5395C37.6134 67.8451 39.8822 66.6335 41.3459 64.2102C42.5791 62.1419 43.1958 59.5101 43.1958 56.3147C43.1928 54.414 42.9341 52.7366 42.4196 51.2823Z" fill="white"></path>
                     <path d="M20.8837 51.5447C22.1616 55.0929 24.7879 56.8669 28.7628 56.8669H30.0176V34.9809H28.7628C25.6889 34.9809 23.4201 36.1925 21.9563 38.6157C20.7267 40.6833 20.1116 43.3151 20.1109 46.5112C20.1109 48.4097 20.3685 50.0876 20.8837 51.5447Z" fill="white"></path>
                     <path d="M0 0.0274658H16.6978V5.82393H5.99408V8.72217H14.8864V14.2222H5.99408V17.1534H16.6978V22.9499H0V0.0274658Z" fill="white"></path>
@@ -29,9 +29,8 @@
                     <path d="M94.8502 39.5489H111.548V45.3453H100.844V48.2436H109.737V53.7436H100.844V56.6748H111.548V62.4713H94.8502V39.5489Z" fill="white"></path>
                     <path d="M136.281 62.4713H118.661V39.5489H127.586C129.496 39.5489 131.055 39.8892 132.263 40.5698C133.416 41.1974 134.374 42.1321 135.029 43.2705C135.691 44.4222 136.032 45.7299 136.017 47.0579C136.033 48.7254 135.475 50.3475 134.436 51.6523C133.441 52.963 132.04 53.9069 130.451 54.3364L136.281 62.4713ZM119.879 41.5579V53.3813H128.343L119.879 41.5579ZM119.879 61.2527H133.975L129.167 54.567L128.146 54.5999H119.879V61.2527ZM120.736 40.7674L129.694 53.2825C131.132 52.995 132.425 52.2146 133.35 51.0759C134.3 49.9546 134.815 48.528 134.799 47.0579C134.812 45.8991 134.504 44.7592 133.909 43.7645C133.317 42.7769 132.446 41.9863 131.406 41.492C130.44 41.009 129.178 40.7674 127.619 40.7674H120.736Z" fill="white"></path>
                 </svg>
-
             </div>
-            <h1 class="header__title">FIND BEST EVENTS AROUND THE WORLD</h1>
+            <h1 class="header__title">FIND BEST EVENTS <br> AROUND THE WORLD</h1>
             <div class="header__center-div">
                 <input class="header__input-searc" type="text" placeholder="Start searching">
                 <svg class="header__searc-icon" width="12" height="12" viewbox="0 0 12 12" fill="#e6e6e6" xmlns="http://www.w3.org/2000/svg">
@@ -40,19 +39,24 @@
                 <select class="header__chose-location" aria-label="Choose location">
                     <option value="All">All</option>
                     <option value="en-us">en-us</option>
-                    <option disabled="" value="Palace of Ukraine">Palace of Ukraine</option>
+                    <option disabled="" value="Palace of Ukraine">
+                        Palace of Ukraine
+                    </option>
                 </select>
+                <svg class="header__arrow-icon" width="13" height="8" viewbox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.5 8L0.00480968 0.5L12.9952 0.499999L6.5 8Z" fill="#e6e6e6"></path>
+                </svg>
             </div>
-
         </div>
     </header>
     <main class="main">
         <div class="container">
-            <ul class="main__list">
-            </ul>
+            <ul class="main__list"></ul>
             <ul class="main__pagination-list">
                 <li class="main__pagination-item active">
-                    <button class="main__pagination-button active-button" type="button">1</button>
+                    <button class="main__pagination-button active-button" type="button">
+                        1
+                    </button>
                 </li>
                 <li class="main__pagination-item">
                     <button class="main__pagination-button" type="button">2</button>
@@ -86,8 +90,12 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <button class="scroll-to-top" type="button"><a href="header">Вверх</a></button>
-            <h3 class="footer__info">© 2021 | All Rights Reserved | Developed with ♥ by GoIT Students</h3>
+            <button class="scroll-to-top" type="button">
+                <a href="#header">Вверх &#9650;</a>
+            </button>
+            <h3 class="footer__info">
+                © 2021 | All Rights Reserved | Developed with ♥ by Oles Slava
+            </h3>
         </div>
     </footer>
 
@@ -105,24 +113,27 @@
                 <img class="modal_poster" src="/modalposter.95a2904a.jpg" alt="poster">
                 <div class="modal_text-div">
                     <h2 class="modal_title">INFO</h2>
-                    <p class="modal_text-info">Atlas Weekend is the largest music festival
-                        in Ukraine.More than 200 artists will create
-                        a proper music festival atmosphere on 10 stages</p>
+                    <p class="modal_text-info">
+                        Atlas Weekend is the largest music festival in Ukraine.More than
+                        200 artists will create a proper music festival atmosphere on 10
+                        stages
+                    </p>
                     <h2 class="modal_title">WHEN</h2>
                     <p class="modal_data">2021-06-09<br>20:00 (Kyiv/Ukraine)</p>
                     <h2 class="modal_title">WHERE</h2>
                     <p class="modal_locate">Kyiv, Ukraine<br>VDNH</p>
                     <h2 class="modal_title">WHO</h2>
                     <p class="modal_who">The Black Eyed Peas</p>
-                    <h2 class="modal_title">PRICES </h2>
+                    <h2 class="modal_title">PRICES</h2>
                     <p class="modal_prices">Standart 300-500 UAH</p>
                     <button class="modal_buy" type="button">BUY TICKETS</button>
                     <p class="modal_prices">VIP 1000-1500 UAH</p>
                     <button class="modal_buy" type="button">BUY TICKETS</button>
                 </div>
-
             </div>
-            <button class="more_info-button" type="button">MORE FROM THIS AUTHOR</button>
+            <button class="more_info-button" type="button">
+                MORE FROM THIS AUTHOR
+            </button>
         </div>
     </div>
 

@@ -9,8 +9,8 @@ body{
     margin-right: auto;
     justify-content: center;
     align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
     display: block;
 
     @media screen and (min-width: 1050px) {
@@ -18,11 +18,10 @@ body{
     }
 
     @media screen and (max-width: 1049px) {
-        width: 595px;
-        padding: 0;
+        width: 610px;
     }
 
-    @media screen and (max-width: 594px) {
+    @media screen and (max-width: 767px) {
         width: 280px
     }
 }

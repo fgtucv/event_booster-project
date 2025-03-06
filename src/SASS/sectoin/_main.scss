@@ -14,7 +14,7 @@
         gap: 45px 12px;
     }
 
-    @media screen and (max-width: 594px) {
+    @media screen and (max-width: 767px) {
         gap: 30px 4px;
     }
 }
@@ -26,7 +26,7 @@
         width: 190px;
     }
 
-    @media screen and (max-width: 594px) {
+    @media screen and (max-width: 767px) {
         width: 138px;
     }
 }
@@ -41,7 +41,8 @@
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
     object-fit: cover;
-    @media screen and (max-width: 594px) {
+
+    @media screen and (max-width: 767px) {
         height: 161px;
         width: 128px;
     }
@@ -53,6 +54,10 @@
     font-size: 16px;
     text-align: center;
     margin-bottom: 5px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 14px;
+    }
 }
 
 .main__date {
@@ -70,6 +75,10 @@
     font-size: 14px;
     display: block;
     text-align: center;
+
+    @media screen and (max-width: 767px) {
+        font-size: 12px;
+    }
 }
 
 .main__pagination-list {
@@ -98,7 +107,7 @@
     text-align: center;
 }
 
-.active{
+.active {
     color: #DC56C5;
     border: #DC56C5 1px solid;
 }

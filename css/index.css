@@ -12,8 +12,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 15px;
-  padding-right: 15px;
   display: block;
 }
 @media screen and (min-width: 1050px) {
@@ -23,11 +21,10 @@ body {
 }
 @media screen and (max-width: 1049px) {
   .container {
-    width: 595px;
-    padding: 0;
+    width: 610px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .container {
     width: 280px;
   }
@@ -42,7 +39,7 @@ ul {
 a {
   text-decoration: none;
   outline: none;
-  color: white;
+  color: #DC56C5;
 }
 
 p {
@@ -115,12 +112,12 @@ button {
           justify-content: center;
   padding-bottom: 192px;
 }
-@media screen and (min-width: 595px) {
+@media screen and (max-width: 1049px) {
   .header .container {
     padding-bottom: 183px;
   }
 }
-@media screen and (min-width: 280px) {
+@media screen and (max-width: 767px) {
   .header .container {
     padding-top: 78px;
     padding-bottom: 112px;
@@ -135,11 +132,44 @@ button {
   background: linear-gradient(136.07deg, rgba(196, 196, 196, 0.03) 10.75%, rgba(196, 196, 196, 0) 92.33%);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
-  border-bottom-right-radius: 300px;
+  border-bottom-right-radius: 90%;
   overflow: hidden;
   position: absolute;
   top: 0px;
   left: 0px;
+}
+@media screen and (max-width: 1049px) {
+  .header__logo-div {
+    height: 151px;
+    width: 180px;
+    padding-top: 23px;
+    padding-left: 23px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__logo-div {
+    height: 90px;
+    width: 107px;
+    padding-top: 23px;
+    padding-left: 23px;
+  }
+}
+
+.header__logo-icon {
+  width: 137px;
+  height: 68px;
+}
+@media screen and (max-width: 1049px) {
+  .header__logo-icon {
+    height: 46px;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__logo-icon {
+    height: 27px;
+    width: 54px;
+  }
 }
 
 .header__title {
@@ -157,7 +187,7 @@ button {
     margin-bottom: 27px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .header__title {
     font-size: 18px;
     margin-bottom: 25px;
@@ -172,7 +202,7 @@ button {
           animation: to-bottom 2s;
   position: relative;
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .header__center-div {
     width: 270px;
   }
@@ -191,8 +221,11 @@ button {
   font-size: 16px;
   margin-right: 30px;
   color: #e6e6e6;
+  padding-right: 45px;
+  border: none;
+  outline: none;
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .header__input-searc {
     margin-bottom: 25px;
   }
@@ -238,6 +271,20 @@ button {
   font-weight: 400;
   font-size: 16px;
   color: #e6e6e6;
+  padding-right: 30px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.header__arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .main {
@@ -260,7 +307,7 @@ button {
     gap: 45px 12px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .main__list {
     gap: 30px 4px;
   }
@@ -274,7 +321,7 @@ button {
     width: 190px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .main__item {
     width: 138px;
   }
@@ -289,7 +336,7 @@ button {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .main__img {
     height: 161px;
     width: 128px;
@@ -302,6 +349,11 @@ button {
   font-size: 16px;
   text-align: center;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 767px) {
+  .main__title {
+    font-size: 14px;
+  }
 }
 
 .main__date {
@@ -319,6 +371,11 @@ button {
   font-size: 14px;
   display: block;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .main__locate {
+    font-size: 12px;
+  }
 }
 
 .main__pagination-list {
@@ -408,7 +465,7 @@ button {
     width: 595px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .modal {
     width: 272px;
     border-top-left-radius: 100px;
@@ -476,7 +533,7 @@ button {
     margin-right: 30px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .modal_poster {
     display: none;
   }
@@ -505,7 +562,7 @@ button {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .modal_title {
     font-size: 20px;
     text-align: center;
@@ -523,7 +580,7 @@ button {
     max-width: 256px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .modal_text-info {
     text-align: center;
   }
@@ -539,7 +596,7 @@ button {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .modal_data {
     text-align: center;
   }
@@ -555,7 +612,7 @@ button {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .modal_locate {
     text-align: center;
   }
@@ -571,7 +628,7 @@ button {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .modal_who {
     text-align: center;
   }
@@ -587,7 +644,7 @@ button {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .modal_prices {
     text-align: center;
   }
@@ -601,7 +658,7 @@ button {
   color: #FFFFFF;
   padding: 11px 19px;
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .modal_buy {
     display: block;
     margin-left: auto;
@@ -642,7 +699,7 @@ button {
   font-size: 16px;
   color: #939393;
 }
-@media screen and (max-width: 594px) {
+@media screen and (max-width: 767px) {
   .footer__info {
     font-weight: 400;
     font-size: 14px;
@@ -650,12 +707,19 @@ button {
 }
 
 .scroll-to-top {
-  background-color: #DC56C5;
-  border: none;
+  background-color: transparent;
+  border: #DC56C5 1px solid;
   padding: 10 12;
   border-radius: 20px;
-  color: white;
   position: absolute;
   right: 30px;
   bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  .scroll-to-top {
+    right: 50%;
+    bottom: 45px;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+  }
 }/*# sourceMappingURL=index.css.map */
