@@ -432,7 +432,7 @@ button {
     width: 272px;
     padding-top: 75px;
     padding-bottom: 104px;
-    padding-left: 12px;
+    padding-left: 0;
   }
 }
 
@@ -443,11 +443,8 @@ button {
 .modal_close-button {
   background: none;
   border: none;
-  justify-content: center;
-  align-items: center;
   width: 25px;
   height: 25px;
-  display: flex;
   position: absolute;
   top: 30px;
   right: 30px;
@@ -540,6 +537,8 @@ button {
 @media screen and (width <= 767px) {
   .modal_text-info {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
