@@ -36,8 +36,8 @@
        width: 272px;
        border-top-left-radius: 100px;
        border-bottom-right-radius: 100px;
-       padding-left: 12px;
        padding-top: 75px;
+       padding-left: 0;
        padding-bottom: 104px;
     }
 }
@@ -54,9 +54,6 @@
     position: absolute;
     right: 30px;
     top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .modal_event-logo {
@@ -135,6 +132,8 @@
     }
 
     @media screen and (max-width: 767px) {
+       margin-right: auto;
+       margin-left: auto;
        text-align: center;
     }
 }

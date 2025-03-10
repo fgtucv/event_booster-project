@@ -470,8 +470,8 @@ button {
     width: 272px;
     border-top-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    padding-left: 12px;
     padding-top: 75px;
+    padding-left: 0;
     padding-bottom: 104px;
   }
 }
@@ -488,15 +488,6 @@ button {
   position: absolute;
   right: 30px;
   top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .modal_event-logo {
@@ -582,6 +573,8 @@ button {
 }
 @media screen and (max-width: 767px) {
   .modal_text-info {
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
   }
 }
